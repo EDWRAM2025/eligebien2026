@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Verificación de declaraciones de candidatos presidenciales 2026 - Fact-checking con fuentes confiables">
+    <title>Fact-Checking - Elige Bien 2026</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0052A3">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
+
+    <style>
+        .factchecking-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .filtros-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .filtros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filtro-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filtro-group label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .filtro-group select,
+        .filtro-group input {
+            padding: 0.75rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .filtro-group select:focus,
+        .filtro-group input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .filtros-acciones {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 1rem;
+        }
+
+        .btn-limpiar {
+            padding: 0.5rem 1.5rem;
+            background: var(--bg-light);
+            border: 2px solid var(--text-muted);
+            color: var(--text-dark);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-limpiar:hover {
+            background: var(--text-muted);
+            color: white;
+        }
+
+        .contador-verificaciones {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .leyenda-veredictos {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .leyenda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .leyenda-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .leyenda-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026" class="logo-header">
+            </a>
+
+            <button class="menu-toggle" aria-label="Menú">&#9776;</button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="comparador.html">Comparador</a></li>
+                    <li><a href="fact-checking.html" class="active">Fact-Checking</a></li>
+                    <li><a href="index.html#transparencia">Transparencia</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Fact-Checking Section -->
+    <section class="factchecking-container" id="fact-checking">
+        <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">
+            ✅ Verificación de Declaraciones
+        </h1>
+        <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem;">
+            Verificamos las declaraciones de los candidatos con fuentes confiables y evidencia documentada.
+            Información actualizada y transparente para que tomes decisiones informadas.
+        </p>
+
+        <!-- Filtros -->
+        <div class="filtros-container">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🔍 Filtros de Búsqueda</h3>
+
+            <div class="filtros-grid">
+                <div class="filtro-group">
+                    <label for="filtro-candidato">Candidato</label>
+                    <select id="filtro-candidato">
+                        <option value="">Todos los candidatos</option>
+                        <option value="001">María González Torres</option>
+                        <option value="002">Carlos Mendoza Ruiz</option>
+                        <option value="003">Ana Lucía Paredes Soto</option>
+                        <option value="004">Roberto Campos Vega</option>
+                    </select>
+                </div>
+
+                <div class="filtro-group">
+                    <label for="filtro-veredicto">Veredicto</label>
+                    <select id="filtro-veredicto">
+                        <option value="">Todos los veredictos</option>
+                        <option value="verdadero">✅ Verdadero</option>
+                        <option value="mixto">⚖️ Mixto</option>
+                        <option value="cuestionable">❓ Cuestionable</option>
+                        <option value="exagerado">📢 Exagerado</option>
+                        <option value="impreciso">⚠️ Impreciso</option>
+                        <option value="muy_improbable">🤔 Muy Improbable</option>
+                    </select>
+                </div>
+
+                <div class="filtro-group">
+                    <label for="busqueda">Buscar</label>
+                    <input type="text" id="busqueda" placeholder="Buscar en declaraciones...">
+                </div>
+            </div>
+
+            <div class="filtros-acciones">
+                <button onclick="limpiarFiltros()" class="btn-limpiar">
+                    🔄 Limpiar Filtros
+                </button>
+            </div>
+
+            <div id="contador-verificaciones" class="contador-verificaciones">
+                Cargando verificaciones...
+            </div>
+        </div>
+
+        <!-- Lista de Verificaciones -->
+        <div id="verificaciones-lista">
+            <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                <p style="font-size: 1.2rem;">⏳ Cargando verificaciones...</p>
+            </div>
+        </div>
+
+        <!-- Leyenda de Veredictos -->
+        <div class="leyenda-veredictos">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">📖 Leyenda de Veredictos</h3>
+            <div class="leyenda-grid">
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #10B981;">✅ Verdadero</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Respaldado por evidencia</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #F59E0B;">⚖️ Mixto</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Parte verdad, parte exagerado</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #EF4444;">❓ Cuestionable</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Falta evidencia</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #F97316;">📢 Exagerado</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Datos inflados</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #FBBF24;">⚠️ Impreciso</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Datos incorrectos</span>
+                </div>
+                <div class="leyenda-item">
+                    <span class="leyenda-badge" style="background: #F87171;">🤔 Muy Improbable</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Altamente improbable</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información Adicional -->
+        <div class="info-box" style="margin-top: 3rem;">
+            <h4>
+                <span class="info-box-icon">ℹ️</span>
+                Sobre el Fact-Checking
+            </h4>
+            <p>
+                Todas las verificaciones están basadas en fuentes oficiales, estudios académicos y datos públicos.
+                Utilizamos metodología periodística estándar utilizada por verificadores internacionales como
+                FactCheck.org, Snopes y PolitiFact.
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <strong>Fuentes confiables:</strong> INEI, Ministerios del Estado, ONPE, JNE, OMS, Banco Mundial,
+                estudios universitarios y reportes de organismos internacionales.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026" class="logo-footer">
+                <p style="margin-top: 1rem; opacity: 0.8;">Información verificada y transparente</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="comparador.html">Comparador</a></li>
+                    <li><a href="fact-checking.html">Fact-Checking</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="https://eg2026.onpe.gob.pe/" target="_blank">Portal ONPE 2026</a></li>
+                    <li><a href="https://www.jne.gob.pe/" target="_blank">JNE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elige Bien 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/factchecking.js"></script>
+    <script src="scripts/chatbot.js"></script>
+</body>
+
+</html>

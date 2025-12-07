@@ -1,0 +1,172 @@
+[
+    {
+        "candidato_id": 1,
+        "nombre": "María Elena Torres",
+        "partido": "Partido Progreso Nacional",
+        "declaracion_jurada": {
+            "año": 2025,
+            "ingresos_anuales": 180000,
+            "bienes_inmuebles": [
+                {
+                    "tipo": "Casa",
+                    "ubicacion": "Lima, San Isidro",
+                    "valor_estimado": 450000,
+                    "año_adquisicion": 2018
+                },
+                {
+                    "tipo": "Departamento",
+                    "ubicacion": "Cusco, Centro Histórico",
+                    "valor_estimado": 180000,
+                    "año_adquisicion": 2020
+                }
+            ],
+            "vehiculos": [
+                {
+                    "marca": "Toyota",
+                    "modelo": "Camry 2022",
+                    "valor_estimado": 35000
+                }
+            ],
+            "cuentas_bancarias": 95000,
+            "inversiones": 120000,
+            "deudas": 85000
+        },
+        "indices": {
+            "transparencia": 92,
+            "declaracion_completa": true,
+            "ultima_actualizacion": "2025-11-15",
+            "fuente_verificacion": "JNE - Jurado Nacional de Elecciones"
+        },
+        "historial": {
+            "sanciones_administrativas": 0,
+            "procesos_judiciales": 0,
+            "inhabilitaciones": 0
+        }
+    },
+    {
+        "candidato_id": 2,
+        "nombre": "Carlos Mendoza",
+        "partido": "Frente Unido Peruano",
+        "declaracion_jurada": {
+            "año": 2025,
+            "ingresos_anuales": 220000,
+            "bienes_inmuebles": [
+                {
+                    "tipo": "Casa",
+                    "ubicacion": "Arequipa, Yanahuara",
+                    "valor_estimado": 380000,
+                    "año_adquisicion": 2016
+                },
+                {
+                    "tipo": "Terreno",
+                    "ubicacion": "Arequipa, Sachaca",
+                    "valor_estimado": 95000,
+                    "año_adquisicion": 2019
+                }
+            ],
+            "vehiculos": [
+                {
+                    "marca": "Nissan",
+                    "modelo": "X-Trail 2021",
+                    "valor_estimado": 38000
+                }
+            ],
+            "cuentas_bancarias": 145000,
+            "inversiones": 85000,
+            "deudas": 120000
+        },
+        "indices": {
+            "transparencia": 78,
+            "declaracion_completa": true,
+            "ultima_actualizacion": "2025-10-28",
+            "fuente_verificacion": "JNE - Jurado Nacional de Elecciones"
+        },
+        "historial": {
+            "sanciones_administrativas": 1,
+            "procesos_judiciales": 0,
+            "inhabilitaciones": 0
+        }
+    },
+    {
+        "candidato_id": 3,
+        "nombre": "Jorge Ramírez",
+        "partido": "Alianza Popular",
+        "declaracion_jurada": {
+            "año": 2025,
+            "ingresos_anuales": 195000,
+            "bienes_inmuebles": [
+                {
+                    "tipo": "Departamento",
+                    "ubicacion": "Lima, Miraflores",
+                    "valor_estimado": 520000,
+                    "año_adquisicion": 2015
+                }
+            ],
+            "vehiculos": [
+                {
+                    "marca": "Honda",
+                    "modelo": "CR-V 2023",
+                    "valor_estimado": 42000
+                }
+            ],
+            "cuentas_bancarias": 78000,
+            "inversiones": 165000,
+            "deudas": 95000
+        },
+        "indices": {
+            "transparencia": 65,
+            "declaracion_completa": false,
+            "ultima_actualizacion": "2025-09-12",
+            "fuente_verificacion": "JNE - Jurado Nacional de Elecciones"
+        },
+        "historial": {
+            "sanciones_administrativas": 2,
+            "procesos_judiciales": 1,
+            "inhabilitaciones": 0
+        }
+    },
+    {
+        "candidato_id": 4,
+        "nombre": "Ana Lucía Flores",
+        "partido": "Movimiento Ciudadano",
+        "declaracion_jurada": {
+            "año": 2025,
+            "ingresos_anuales": 165000,
+            "bienes_inmuebles": [
+                {
+                    "tipo": "Casa",
+                    "ubicacion": "Trujillo, La Esperanza",
+                    "valor_estimado": 220000,
+                    "año_adquisicion": 2017
+                },
+                {
+                    "tipo": "Departamento",
+                    "ubicacion": "Lima, Surco",
+                    "valor_estimado": 310000,
+                    "año_adquisicion": 2021
+                }
+            ],
+            "vehiculos": [
+                {
+                    "marca": "Mazda",
+                    "modelo": "CX-5 2022",
+                    "valor_estimado": 36000
+                }
+            ],
+            "cuentas_bancarias": 58000,
+            "inversiones": 92000,
+            "deudas": 145000
+        },
+        "indices": {
+            "transparencia": 88,
+            "declaracion_completa": true,
+            "ultima_actualizacion": "2025-11-20",
+            "fuente_verificacion": "JNE - Jurado Nacional de Elecciones"
+        },
+        "historial": {
+            "sanciones_administrativas": 0,
+            "procesos_judiciales": 0,
+            "inhabilitaciones": 0
+        }
+    }
+]

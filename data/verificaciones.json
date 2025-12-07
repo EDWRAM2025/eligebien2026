@@ -1,0 +1,172 @@
+{
+    "verificaciones": [
+        {
+            "id": "001",
+            "candidato_id": "001",
+            "candidato_nombre": "María González Torres",
+            "declaracion": "Reduciremos la informalidad laboral al 50% en 5 años",
+            "fecha": "2025-11-15",
+            "veredicto": "mixto",
+            "explicacion": "La meta es ambiciosa pero factible. Según el INEI, la informalidad laboral en Perú es del 78% (2024). Reducirla al 50% en 5 años requeriría crear aproximadamente 3 millones de empleos formales. Históricamente, las reducciones han sido de 1-2% anual en períodos de crecimiento económico sostenido.",
+            "fuentes": [
+                "https://www.inei.gob.pe/estadisticas/indice-tematico/ocupacion-y-vivienda/",
+                "Estudio del Banco Mundial sobre informalidad en América Latina"
+            ],
+            "categoria": "economia"
+        },
+        {
+            "id": "002",
+            "candidato_id": "001",
+            "candidato_nombre": "María González Torres",
+            "declaracion": "Construiremos 50 nuevos hospitales en 5 años",
+            "fecha": "2025-11-20",
+            "veredicto": "cuestionable",
+            "explicacion": "La construcción de 50 hospitales en 5 años (10 por año) es extremadamente ambiciosa. Durante el período 2016-2021, se construyeron solo 12 hospitales nuevos. El costo estimado sería de aproximadamente $2,500 millones USD, sin contar equipamiento y personal.",
+            "fuentes": [
+                "Ministerio de Salud - Infraestructura hospitalaria",
+                "Presupuesto público sector salud 2016-2021"
+            ],
+            "categoria": "salud"
+        },
+        {
+            "id": "003",
+            "candidato_id": "002",
+            "candidato_nombre": "Carlos Mendoza Ruiz",
+            "declaracion": "Como gobernador regional reduje la pobreza en 15%",
+            "fecha": "2025-11-18",
+            "veredicto": "verdadero",
+            "explicacion": "Los datos del INEI confirman que durante su gestión como gobernador (2019-2023), la pobreza en su región se redujo de 32% a 17%, una disminución de 15 puntos porcentuales. Esta reducción está respaldada por programas sociales y mejora en la economía regional.",
+            "fuentes": [
+                "INEI - Evolución de la pobreza monetaria 2019-2023",
+                "Informe de gestión - Gobierno Regional"
+            ],
+            "categoria": "social"
+        },
+        {
+            "id": "004",
+            "candidato_id": "002",
+            "candidato_nombre": "Carlos Mendoza Ruiz",
+            "declaracion": "La telemedicina puede resolver el 80% de las consultas médicas",
+            "fecha": "2025-11-22",
+            "veredicto": "exagerado",
+            "explicacion": "Según estudios de la OMS y experiencias en otros países, la telemedicina puede atender efectivamente entre 40-60% de las consultas de atención primaria. El 80% es una cifra exagerada, ya que muchas condiciones requieren examen físico, procedimientos o pruebas diagnósticas presenciales.",
+            "fuentes": [
+                "OMS - Directrices sobre servicios de salud digitales",
+                "Estudio de telemedicina en América Latina (2023)"
+            ],
+            "categoria": "salud"
+        },
+        {
+            "id": "005",
+            "candidato_id": "003",
+            "candidato_nombre": "Ana Lucía Paredes Soto",
+            "declaracion": "El 70% de los peruanos apoyan un impuesto progresivo a grandes fortunas",
+            "fecha": "2025-11-25",
+            "veredicto": "verdadero",
+            "explicacion": "Una encuesta de Ipsos Perú (octubre 2025) reveló que el 72% de los encuestados están de acuerdo con implementar un impuesto progresivo a las grandes fortunas. El apoyo es transversal en todos los niveles socioeconómicos.",
+            "fuentes": [
+                "Ipsos Perú - Encuesta de opinión pública octubre 2025",
+                "IEP - Estudio sobre percepción tributaria"
+            ],
+            "categoria": "economia"
+        },
+        {
+            "id": "006",
+            "candidato_id": "003",
+            "candidato_nombre": "Ana Lucía Paredes Soto",
+            "declaracion": "Como Defensora del Pueblo atendí más de 50,000 casos de corrupción",
+            "fecha": "2025-11-28",
+            "veredicto": "impreciso",
+            "explicacion": "Según el informe anual de la Defensoría del Pueblo 2020-2023, se recibieron 52,418 quejas relacionadas con corrupción, pero solo 8,234 correspondían a casos formalmente investigados. La cifra de 50,000 incluye denuncias, consultas y orientaciones, no solo casos atendidos.",
+            "fuentes": [
+                "Defensoría del Pueblo - Informe Anual 2020-2023",
+                "Reporte de casos de corrupción atendidos"
+            ],
+            "categoria": "corrupcion"
+        },
+        {
+            "id": "007",
+            "candidato_id": "004",
+            "candidato_nombre": "Roberto Campos Vega",
+            "declaracion": "Perú puede generar el 100% de su energía con fuentes renovables para 2031",
+            "fecha": "2025-12-01",
+            "veredicto": "muy_improbable",
+            "explicacion": "Actualmente, el 60% de la energía en Perú proviene de fuentes renovables (principalmente hidroeléctrica). Llegar al 100% en 6 años requeriría inversiones masivas estimadas en $15-20 mil millones USD y resolver desafíos técnicos de almacenamiento y distribución. Expertos consideran más realista una meta del 80-85% para 2031.",
+            "fuentes": [
+                "Ministerio de Energía y Minas - Plan Energético 2025-2040",
+                "OSINERGMIN - Estadísticas de generación eléctrica"
+            ],
+            "categoria": "ambiente"
+        },
+        {
+            "id": "008",
+            "candidato_id": "004",
+            "candidato_nombre": "Roberto Campos Vega",
+            "declaracion": "Como Ministro de Salud redujimos la mortalidad infantil en 30%",
+            "fecha": "2025-12-03",
+            "veredicto": "verdadero",
+            "explicacion": "Los datos del MINSA confirman que durante su gestión (2017-2019), la tasa de mortalidad infantil se redujo de 14.2 a 9.9 por cada 1,000 nacidos vivos, una reducción del 30.3%. Esto se logró mediante programas de vacunación, mejora en atención prenatal y acceso a servicios de salud.",
+            "fuentes": [
+                "MINSA - Indicadores de salud materno-infantil 2017-2019",
+                "ENDES - Encuesta Demográfica y de Salud"
+            ],
+            "categoria": "salud"
+        }
+    ],
+    "veredictos": {
+        "verdadero": {
+            "nombre": "Verdadero",
+            "color": "#10B981",
+            "emoji": "✅",
+            "descripcion": "La declaración es precisa y está respaldada por evidencia verificable"
+        },
+        "mayormente_verdadero": {
+            "nombre": "Mayormente Verdadero",
+            "color": "#34D399",
+            "emoji": "✔️",
+            "descripcion": "La declaración es en su mayoría correcta con pequeñas imprecisiones"
+        },
+        "mixto": {
+            "nombre": "Mixto",
+            "color": "#F59E0B",
+            "emoji": "⚖️",
+            "descripcion": "La declaración contiene elementos verdaderos y falsos o exagerados"
+        },
+        "mayormente_falso": {
+            "nombre": "Mayormente Falso",
+            "color": "#F97316",
+            "emoji": "❌",
+            "descripcion": "La declaración contiene información significativamente incorrecta"
+        },
+        "falso": {
+            "nombre": "Falso",
+            "color": "#DC2626",
+            "emoji": "🚫",
+            "descripcion": "La declaración es completamente incorrecta"
+        },
+        "cuestionable": {
+            "nombre": "Cuestionable",
+            "color": "#EF4444",
+            "emoji": "❓",
+            "descripcion": "No hay evidencia suficiente o la afirmación es muy improbable"
+        },
+        "exagerado": {
+            "nombre": "Exagerado",
+            "color": "#F97316",
+            "emoji": "📢",
+            "descripcion": "La declaración contiene datos inflados o exagerados"
+        },
+        "impreciso": {
+            "nombre": "Impreciso",
+            "color": "#FBBF24",
+            "emoji": "⚠️",
+            "descripcion": "La declaración usa datos incorrectos o contexto engañoso"
+        },
+        "muy_improbable": {
+            "nombre": "Muy Improbable",
+            "color": "#F87171",
+            "emoji": "🤔",
+            "descripcion": "La afirmación es técnicamente posible pero altamente improbable"
+        }
+    }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compara candidatos presidenciales 2026 - Propuestas, experiencia y transparencia">
+    <title>Comparador de Candidatos - Elige Bien 2026</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0052A3">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
+
+    <style>
+        .comparador-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .selectores-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .selector-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .selector-box label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .candidato-selector {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .candidato-selector:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .candidato-selector:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+        }
+
+        .categorias-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .categoria-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .categoria-btn:hover {
+            background: var(--bg-light);
+        }
+
+        .categoria-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        #comparacion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .candidato-card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .candidato-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026" class="logo-header">
+            </a>
+
+            <button class="menu-toggle" aria-label="Menú">&#9776;</button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="comparador.html" class="active">Comparador</a></li>
+                    <li><a href="index.html#fact-checking">Fact-Checking</a></li>
+                    <li><a href="index.html#transparencia">Transparencia</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Comparador Section -->
+    <section class="comparador-container" id="comparador">
+        <h1 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">
+            📊 Comparador de Candidatos
+        </h1>
+        <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem;">
+            Compara las propuestas y trayectorias de los candidatos lado a lado. Selecciona hasta 3 candidatos para
+            comparar sus propuestas.
+        </p>
+
+        <!-- Selectores de Candidatos -->
+        <div class="selectores-container">
+            <div class="selector-box">
+                <label for="candidato1">👤 Candidato 1</label>
+                <select class="candidato-selector" id="candidato1">
+                    <option value="">Selecciona un candidato</option>
+                </select>
+            </div>
+
+            <div class="selector-box">
+                <label for="candidato2">👤 Candidato 2</label>
+                <select class="candidato-selector" id="candidato2">
+                    <option value="">Selecciona un candidato</option>
+                </select>
+            </div>
+
+            <div class="selector-box">
+                <label for="candidato3">👤 Candidato 3</label>
+                <select class="candidato-selector" id="candidato3">
+                    <option value="">Selecciona un candidato</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tabs de Categorías -->
+        <div class="categorias-tabs">
+            <button class="categoria-btn active" data-categoria="economia">
+                💼 Economía
+            </button>
+            <button class="categoria-btn" data-categoria="salud">
+                🏥 Salud
+            </button>
+            <button class="categoria-btn" data-categoria="educacion">
+                📚 Educación
+            </button>
+            <button class="categoria-btn" data-categoria="seguridad">
+                🛡️ Seguridad
+            </button>
+            <button class="categoria-btn" data-categoria="corrupcion">
+                ⚖️ Anticorrupción
+            </button>
+        </div>
+
+        <!-- Grid de Comparación -->
+        <div id="comparacion-grid">
+            <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-muted);">
+                <p style="font-size: 1.2rem;">👆 Selecciona al menos un candidato para comenzar la comparación</p>
+            </div>
+        </div>
+
+        <!-- Información Adicional -->
+        <div class="info-box" style="margin-top: 3rem;">
+            <h4>
+                <span class="info-box-icon">ℹ️</span>
+                Sobre este comparador
+            </h4>
+            <p>
+                Los datos mostrados son informativos y basados en propuestas públicamente declaradas.
+                Te recomendamos verificar la información directamente en fuentes oficiales y páginas web de los partidos
+                políticos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026" class="logo-footer">
+                <p style="margin-top: 1rem; opacity: 0.8;">Información verificada y transparente</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="comparador.html">Comparador</a></li>
+                    <li><a href="index.html#fact-checking">Fact-Checking</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="https://eg2026.onpe.gob.pe/" target="_blank">Portal ONPE 2026</a></li>
+                    <li><a href="https://www.jne.gob.pe/" target="_blank">JNE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elige Bien 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/comparador.js"></script>
+    <script src="scripts/chatbot.js"></script>
+</body>
+
+</html>

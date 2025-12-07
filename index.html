@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma cívica con información verificada y transparente sobre las Elecciones Generales 2026 de Perú">
+    <meta name="keywords" content="elecciones 2026, Perú, candidatos, fact-checking, transparencia electoral">
+    <meta name="author" content="Elige Bien 2026">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Elige Bien 2026 - Información Electoral Verificada">
+    <meta property="og:description"
+        content="Plataforma cívica con información verificada sobre las Elecciones Generales 2026">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elige Bien 2026">
+
+
+    <title>Elige Bien 2026 - Información Electoral Verificada</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0052A3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Elige Bien 2026">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026 - Información Electoral Verificada"
+                    class="logo-header">
+            </a>
+
+            <button class="menu-toggle" aria-label="Menú">&#9776;</button>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="comparador.html">Comparador</a></li>
+                    <li><a href="fact-checking.html">Fact-Checking</a></li>
+                    <li><a href="transparencia.html">Transparencia</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#enlaces">Enlaces</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contador Regresivo -->
+    <section id="countdown" class="countdown-section">
+        <!-- El contenido será insertado por countdown.js -->
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Elige Bien 2026</h1>
+            <p>Información verificada y transparente para decisiones informadas en las Elecciones Generales 2026</p>
+            <a href="#comparador" class="cta-button">Compara Candidatos</a>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Principales -->
+    <section id="features">
+        <h2>Nuestras Herramientas</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>📊 Comparador de Candidatos</h3>
+                <p>Compara propuestas, antecedentes y trayectorias de los candidatos presidenciales y congresales lado a
+                    lado.</p>
+                <a href="comparador.html" class="cta-button"
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Ir al
+                    Comparador</a>
+            </div>
+
+            <div class="card">
+                <h3>✅ Fact-Checking</h3>
+                <p>Verificación de declaraciones y propuestas de candidatos con fuentes confiables y evidencia
+                    documentada.</p>
+                <a href="fact-checking.html" class="cta-button"
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Ver
+                    Verificaciones</a>
+            </div>
+
+            <div class="card">
+                <h3>🗺️ Mapa de Transparencia</h3>
+                <p>Explora indicadores de transparencia, declaraciones juradas e investigaciones por región y candidato.
+                </p>
+                <a href="#transparencia" class="cta-button"
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Explorar
+                    Mapa</a>
+            </div>
+
+            <div class="card">
+                <h3>💬 Chatbot Cívico</h3>
+                <p>Pregunta sobre el proceso electoral, candidatos, propuestas y más. Respuestas verificadas al
+                    instante.</p>
+                <a href="#chatbot" class="cta-button"
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Hacer
+                    Preguntas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Electoral -->
+    <section class="timeline-section">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">
+            📅 Línea de Tiempo del Proceso Electoral
+        </h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">
+            Fechas clave que debes conocer para las Elecciones Generales 2026
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">26 de Marzo de 2025</div>
+                <div class="timeline-content">
+                    <strong>Convocatoria Oficial</strong>
+                    <p>Convocatoria a Elecciones Generales 2026 por el JNE</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">14 de Octubre de 2025</div>
+                <div class="timeline-content">
+                    <strong>Cierre del Padrón Electoral</strong>
+                    <p>Fecha límite para actualizar tus datos en el padrón</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">23 de Diciembre de 2025</div>
+                <div class="timeline-content">
+                    <strong>Inscripción de Candidatos</strong>
+                    <p>Fecha límite para inscripción de fórmulas y listas de candidatos</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">29 de Enero de 2026</div>
+                <div class="timeline-content">
+                    <strong>Sorteo de Miembros de Mesa</strong>
+                    <p>Selección aleatoria de ciudadanos para conformar las mesas de votación</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">29 de Marzo de 2026</div>
+                <div class="timeline-content">
+                    <strong>Capacitación a Miembros de Mesa</strong>
+                    <p>Primera jornada de capacitación para miembros de mesa</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" style="border-left: 4px solid var(--accent-color);">
+                <div class="timeline-date" style="color: var(--accent-color); font-size: 1.25rem;">
+                    🗳️ 12 de Abril de 2026
+                </div>
+                <div class="timeline-content"
+                    style="background: linear-gradient(135deg, rgba(220, 20, 60, 0.05), rgba(220, 20, 60, 0.1)); border: 2px solid var(--accent-color);">
+                    <strong style="color: var(--accent-color); font-size: 1.1rem;">¡DÍA DE LAS ELECCIONES!</strong>
+                    <p style="font-weight: 500;">Horario: 7:00 AM - 5:00 PM</p>
+                    <p>Recuerda llevar tu DNI y conocer tu local de votación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Videos Educativos -->
+    <section id="videos" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">📺 Videos Educativos</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">
+                Conoce más sobre el proceso electoral con videos oficiales de la ONPE
+            </p>
+
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cJ5UuJJRfNQ"
+                        title="Video ONPE 1" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <h4 style="margin-top: 1rem;">Elecciones Generales 2026</h4>
+                </div>
+
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/OTz3oP_2r3k"
+                        title="Video ONPE 2" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <h4 style="margin-top: 1rem;">Proceso Electoral Peruano</h4>
+                </div>
+
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/W9YrJz85r2Q"
+                        title="Video ONPE 3" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <h4 style="margin-top: 1rem;">Voto Responsable</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Enlaces Útiles -->
+    <section id="enlaces" class="useful-links-section">
+        <h2>Enlaces Útiles</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">
+            Recursos oficiales y verificadores de información confiables
+        </p>
+
+        <div class="links-grid">
+            <div class="link-category">
+                <h3>🏛️ Organismos Oficiales</h3>
+                <ul>
+                    <li><a href="https://www.onpe.gob.pe/" target="_blank" rel="noopener">ONPE - Oficina Nacional de
+                            Procesos Electorales</a></li>
+                    <li><a href="https://www.jne.gob.pe/" target="_blank" rel="noopener">JNE - Jurado Nacional de
+                            Elecciones</a></li>
+                    <li><a href="https://www.reniec.gob.pe/" target="_blank" rel="noopener">RENIEC - Registro Nacional
+                            de Identificación</a></li>
+                </ul>
+            </div>
+
+            <div class="link-category">
+                <h3>📰 Verificadores de Información</h3>
+                <ul>
+                    <li><a href="https://ojo-publico.com/" target="_blank" rel="noopener">OjoPúblico - Periodismo de
+                            Investigación</a></li>
+                    <li><a href="https://convoca.pe/" target="_blank" rel="noopener">Convoca - Verificación de Datos</a>
+                    </li>
+                    <li><a href="https://www.idl-reporteros.pe/" target="_blank" rel="noopener">IDL-Reporteros -
+                            Investigación Periodística</a></li>
+                </ul>
+            </div>
+
+            <div class="link-category">
+                <h3>📌 Información Electoral 2026</h3>
+                <ul>
+                    <li><a href="https://eg2026.onpe.gob.pe/" target="_blank" rel="noopener">Portal Oficial EG2026</a>
+                    </li>
+                    <li><a href="https://eg2026.onpe.gob.pe/para-electores/elige-tu-local-de-votacion/" target="_blank"
+                            rel="noopener">Consulta tu Local de Votación</a></li>
+                    <li><a href="https://eg2026.onpe.gob.pe/lo-nuevo/cedula-de-sufragio/" target="_blank"
+                            rel="noopener">Conoce tu Cédula de Sufragio</a></li>
+                    <li><a href="https://infogob.jne.gob.pe/" target="_blank" rel="noopener">Infogob JNE - Información
+                            de Autoridades</a></li>
+                </ul>
+            </div>
+
+            <div class="link-category">
+                <h3>📚 Educación Cívica</h3>
+                <ul>
+                    <li><a href="https://www.jne.gob.pe/" target="_blank" rel="noopener">Transparencia Electoral -
+                            JNE</a></li>
+                    <li><a href="https://eg2026.onpe.gob.pe/acerca-del-proceso/informacion-general/" target="_blank"
+                            rel="noopener">Información General del Proceso Electoral</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Electoral -->
+    <section style="background-color: var(--bg-light);">
+        <h2>¿Qué elegiremos el 12 de abril de 2026?</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>👤 Presidente y Vicepresidentes</h3>
+                <p>Elección de Presidente de la República y dos Vicepresidentes para el período 2026-2031.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏛️ Senadores</h3>
+                <p>60 senadores que conformarán la Cámara de Senadores del nuevo Congreso bicameral.</p>
+            </div>
+
+            <div class="card">
+                <h3>📋 Diputados</h3>
+                <p>130 diputados que conformarán la Cámara de Diputados, representando las diversas circunscripciones
+                    del país.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌎 Parlamento Andino</h3>
+                <p>Representantes peruanos ante el Parlamento Andino, organismo internacional de la Comunidad Andina.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/images/LOGO.png" alt="Elige Bien 2026" class="logo-footer">
+                <p style="margin-top: 1rem; opacity: 0.8;">Información verificada y transparente para decisiones
+                    informadas.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#comparador">Comparador</a></li>
+                    <li><a href="#fact-checking">Fact-Checking</a></li>
+                    <li><a href="#transparencia">Transparencia</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="https://eg2026.onpe.gob.pe/" target="_blank">Portal ONPE 2026</a></li>
+                    <li><a href="https://www.jne.gob.pe/" target="_blank">JNE</a></li>
+                    <li><a href="https://www.reniec.gob.pe/" target="_blank">RENIEC</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <p style="opacity: 0.8;">Mantente informado a través de nuestras redes sociales y fuentes oficiales.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elige Bien 2026. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">Plataforma cívica independiente para información electoral
+                verificada.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/countdown.js"></script>
+    <script src="scripts/chatbot.js"></script>
+</body>
+
+</html>
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log('SW registered', reg))
+                .catch(err => console.log('SW error', err));
+        });
+    }
+</script>

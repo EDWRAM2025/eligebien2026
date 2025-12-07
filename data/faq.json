@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "categoria": "Proceso Electoral",
+        "pregunta": "¿Cuándo son las elecciones 2026?",
+        "respuesta": "Las Elecciones Generales 2026 se realizarán el **domingo 12 de abril de 2026**. Ese día se elegirá a Presidente, Vicepresidentes y Congresistas de la República.",
+        "keywords": [
+            "fecha",
+            "cuándo",
+            "elecciones",
+            "2026",
+            "cuando"
+        ]
+    },
+    {
+        "id": 2,
+        "categoria": "Proceso Electoral",
+        "pregunta": "¿Qué se elige en 2026?",
+        "respuesta": "En las Elecciones Generales 2026 se elegirá:\n• **Presidente de la República**\n• **Dos Vicepresidentes**\n• **130 Congresistas** (Parlamento)\n\nEs decir, todo el Poder Ejecutivo y Legislativo.",
+        "keywords": [
+            "qué",
+            "que",
+            "cargos",
+            "elegir",
+            "votar"
+        ]
+    },
+    {
+        "id": 3,
+        "categoria": "Votación",
+        "pregunta": "¿Dónde voto?",
+        "respuesta": "Puedes consultar tu **local de votación** en:\n• Sitio web de ONPE: www.onpe.gob.pe\n• App oficial ONPE\n• Enviando un SMS al 1012\n\nNecesitas tu **DNI** para la consulta.",
+        "keywords": [
+            "dónde",
+            "donde",
+            "voto",
+            "local",
+            "votación",
+            "mesa"
+        ]
+    },
+    {
+        "id": 4,
+        "categoria": "Votación",
+        "pregunta": "¿Qué necesito para votar?",
+        "respuesta": "Para votar necesitas:\n• **DNI vigente** (obligatorio)\n• Conocer tu **local y mesa de votación**\n• Llegar entre las **7:00 AM y 4:00 PM**\n\nNo necesitas llevar la multa electoral si la tienes pendiente, pero sí debes votarla después.",
+        "keywords": [
+            "necesito",
+            "requisitos",
+            "documentos",
+            "dni"
+        ]
+    },
+    {
+        "id": 5,
+        "categoria": "Candidatos",
+        "pregunta": "¿Cómo puedo conocer a los candidatos?",
+        "respuesta": "Puedes informarte sobre los candidatos en:\n• **Página oficial del JNE** (portal.jne.gob.pe) - Hojas de vida y planes de gobierno\n• **Nuestra plataforma Elige Bien 2026** - Comparador y fact-checking\n• **Debates presidenciales** organizados por el JNE\n• **Declaraciones juradas** públicas de candidatos",
+        "keywords": [
+            "candidatos",
+            "conocer",
+            "información",
+            "propuestas"
+        ]
+    },
+    {
+        "id": 6,
+        "categoria": "Candidatos",
+        "pregunta": "¿Dónde veo las propuestas de los candidatos?",
+        "respuesta": "Las propuestas de los candidatos están en:\n• **Planes de Gobierno** oficiales en el JNE\n• **Nuestra sección Comparador** - Compara propuestas lado a lado\n• **Debates presidenciales**\n• **Sitios web oficiales** de partidos políticos\n\n💡 Usa fuentes oficiales para evitar desinformación.",
+        "keywords": [
+            "propuestas",
+            "planes",
+            "gobierno",
+            "programa"
+        ]
+    },
+    {
+        "id": 7,
+        "categoria": "Verificación",
+        "pregunta": "¿Cómo sé si una noticia es verdadera?",
+        "respuesta": "Para verificar noticias sobre candidatos:\n• **Verifica la fuente** - Prefiere medios confiables\n• **Nuestra sección Fact-Checking** - Declaraciones verificadas\n• **OjoPúblico, Convoca, IDL-Reporteros** - Verificadores independientes\n• **No compartas** información no verificada\n\n⚠️ La desinformación afecta la democracia.",
+        "keywords": [
+            "fake news",
+            "noticias",
+            "falsas",
+            "verificar",
+            "fact"
+        ]
+    },
+    {
+        "id": 8,
+        "categoria": "Transparencia",
+        "pregunta": "¿Cómo veo el patrimonio de los candidatos?",
+        "respuesta": "El patrimonio de los candidatos está en:\n• **Declaraciones Juradas** en el JNE (portal.jne.gob.pe)\n• **Nuestra sección Transparencia** - Información organizada y fácil de leer\n\nAllí verás ingresos, bienes, deudas y más.",
+        "keywords": [
+            "patrimonio",
+            "bienes",
+            "declaración",
+            "jurada",
+            "dinero"
+        ]
+    },
+    {
+        "id": 9,
+        "categoria": "Sanciones",
+        "pregunta": "¿Qué pasa si no voto?",
+        "respuesta": "Si no votas y **no tienes justificación válida**, recibirás una multa:\n• **S/ 96** (zona urbana)\n• **S/ 48** (zona rural)\n\nJustificaciones válidas: enfermedad, viaje, etc. Debes presentar documentos probatorios.",
+        "keywords": [
+            "multa",
+            "sanción",
+            "no voto",
+            "justificación"
+        ]
+    },
+    {
+        "id": 10,
+        "categoria": "Voto Informado",
+        "pregunta": "¿Por qué es importante votar informado?",
+        "respuesta": "Votar informado es importante porque:\n• Eliges a quienes **gobernarán el país por 5 años**\n• Tus derechos y futuro dependen de estas decisiones\n• **La democracia requiere ciudadanos informados**\n• Evitas ser influenciado por desinformación\n\n✅ ¡Tu voto tiene poder! Úsalo responsablemente.",
+        "keywords": [
+            "importante",
+            "informado",
+            "responsable",
+            "por qué"
+        ]
+    },
+    {
+        "id": 11,
+        "categoria": "Organismos",
+        "pregunta": "¿Qué es la ONPE?",
+        "respuesta": "La **ONPE** (Oficina Nacional de Procesos Electorales) es el organismo que:\n• Organiza y ejecuta los procesos electorales\n• Imprime las cédulas de votación\n• Capacita a los miembros de mesa\n• Difunde los resultados electorales\n\nSitio oficial: www.onpe.gob.pe",
+        "keywords": [
+            "onpe",
+            "organismo",
+            "electoral"
+        ]
+    },
+    {
+        "id": 12,
+        "categoria": "Organismos",
+        "pregunta": "¿Qué es el JNE?",
+        "respuesta": "El **JNE** (Jurado Nacional de Elecciones) es el máximo organismo electoral que:\n• Fiscaliza la legalidad del proceso electoral\n• Administra justicia electoral\n• Proclama a los ganadores\n• Custodia las declaraciones juradas de candidatos\n\nSitio oficial: portal.jne.gob.pe",
+        "keywords": [
+            "jne",
+            "jurado",
+            "nacional",
+            "elecciones"
+        ]
+    },
+    {
+        "id": 13,
+        "categoria": "Votación",
+        "pregunta": "¿Puedo votar desde el extranjero?",
+        "respuesta": "**Sí**, los peruanos en el extranjero pueden votar si están inscritos en el **Registro Electoral de Peruanos en el Exterior (REPE)**.\n\nLa votación se realiza en consulados y embajadas. Consulta: www.onpe.gob.pe",
+        "keywords": [
+            "extranjero",
+            "exterior",
+            "consulado",
+            "fuera"
+        ]
+    },
+    {
+        "id": 14,
+        "categoria": "Votación",
+        "pregunta": "¿El voto es obligatorio?",
+        "respuesta": "**Sí**, en Perú el voto es obligatorio para:\n• Ciudadanos entre **18 y 70 años**\n\n**Voluntario** para:\n• Mayores de 70 años\n• Personal de las Fuerzas Armadas y Policía Nacional en actividad\n• Peruanos residentes en el extranjero",
+        "keywords": [
+            "obligatorio",
+            "voluntario",
+            "deber",
+            "obligación"
+        ]
+    },
+    {
+        "id": 15,
+        "categoria": "Segunda Vuelta",
+        "pregunta": "¿Qué es la segunda vuelta?",
+        "respuesta": "La **segunda vuelta electoral** ocurre si en la primera vuelta ningún candidato presidencial obtiene **más del 50% de votos válidos**.\n\nEn ese caso, los **dos candidatos más votados** compiten en una segunda elección (aprox. 5 semanas después).",
+        "keywords": [
+            "segunda",
+            "vuelta",
+            "balotaje",
+            "runoff"
+        ]
+    },
+    {
+        "id": 16,
+        "categoria": "Voto Informado",
+        "pregunta": "¿Qué es Elige Bien 2026?",
+        "respuesta": "**Elige Bien 2026** es una plataforma cívica independiente que proporciona:\n• **Comparador de candidatos** - Compara propuestas fácilmente\n• **Fact-checking** - Verifica declaraciones de candidatos\n• **Transparencia** - Consulta declaraciones juradas\n• **Información verificada** de fuentes oficiales\n\n¡Nuestro objetivo es ayudarte a votar informado! 🗳️",
+        "keywords": [
+            "elige bien",
+            "plataforma",
+            "qué es",
+            "sobre",
+            "nosotros"
+        ]
+    }
+]

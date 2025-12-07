@@ -1,0 +1,131 @@
+{
+    "candidatos": [
+        {
+            "id": "001",
+            "nombre": "María González Torres",
+            "partido": "Partido Democrático Popular",
+            "siglas": "PDP",
+            "foto": "assets/images/candidatos/candidato1.jpg",
+            "edad": 52,
+            "profesion": "Economista",
+            "experiencia": "Ex ministra de Economía (2018-2020), Congresista (2016-2021)",
+            "propuestas": {
+                "economia": "Fortalecer la inversión pública en infraestructura. Crear 500,000 empleos formales. Reducir la informalidad laboral al 50% en 5 años.",
+                "salud": "Aumentar presupuesto de salud a 6% del PBI. Construir 50 nuevos hospitales. Implementar seguro universal de salud.",
+                "educacion": "Aumentar sueldo de maestros en 30%. Digitalización de todas las escuelas públicas. Educación gratuita hasta nivel técnico.",
+                "seguridad": "Modernizar la Policía Nacional. Crear 1000 nuevas comisarías. Implementar cámaras de seguridad en zonas críticas.",
+                "corrupcion": "Fortalecer la fiscalía anticorrupción. Transparencia total en contrataciones públicas. Cárcel efectiva para corruptos."
+            },
+            "redes": {
+                "twitter": "@mgonzalez_oficial",
+                "facebook": "MariaGonzalezPDP",
+                "web": "https://ejemplo.com/gonzalez"
+            },
+            "declaracion_jurada": "Ver documento",
+            "investigaciones": "Sin investigaciones en curso",
+            "indice_transparencia": 8.5
+        },
+        {
+            "id": "002",
+            "nombre": "Carlos Mendoza Ruiz",
+            "partido": "Alianza Nacional Progresista",
+            "siglas": "ANP",
+            "foto": "assets/images/candidatos/candidato2.jpg",
+            "edad": 48,
+            "profesion": "Ingeniero Civil",
+            "experiencia": "Gobernador Regional (2019-2023), Alcalde Provincial (2015-2018)",
+            "propuestas": {
+                "economia": "Inversión en infraestructura vial. Promoción de PYMES con créditos blandos. Reducción de impuestos para empresas pequeñas.",
+                "salud": "Telemedicina para zonas rurales. Equipamiento de postas médicas. Prevención y medicina familiar.",
+                "educacion": "Becas para estudiantes destacados. Inglés obligatorio desde primaria. Infraestructura educativa mejorada.",
+                "seguridad": "Serenazgo fortalecido. Vigilancia comunitaria. Rehabilitación de jóvenes en riesgo.",
+                "corrupcion": "Auditorías sorpresa. Publicación de gastos en tiempo real. Sanción ejemplar a funcionarios corruptos."
+            },
+            "redes": {
+                "twitter": "@cmendoza_peru",
+                "facebook": "CarlosMendozaANP",
+                "web": "https://ejemplo.com/mendoza"
+            },
+            "declaracion_jurada": "Ver documento",
+            "investigaciones": "Sin investigaciones en curso",
+            "indice_transparencia": 7.8
+        },
+        {
+            "id": "003",
+            "nombre": "Ana Lucía Paredes Soto",
+            "partido": "Movimiento Ciudadano",
+            "siglas": "MC",
+            "foto": "assets/images/candidatos/candidato3.jpg",
+            "edad": 45,
+            "profesion": "Abogada",
+            "experiencia": "Defensora del Pueblo (2020-2023), Congresista (2011-2016)",
+            "propuestas": {
+                "economia": "Impuesto progresivo a grandes fortunas. Apoyo a agricultura familiar. Reactivación económica post-pandemia.",
+                "salud": "Salud mental como prioridad. Atención primaria fortalecida. Medicamentos gratuitos para enfermedades crónicas.",
+                "educacion": "Educación inclusiva y de calidad. Alimentación escolar nutritiva. Capacitación docente continua.",
+                "seguridad": "Reforma policial integral. Justicia rápida y efectiva. Protección a víctimas de violencia.",
+                "corrupcion": "Reforma del sistema judicial. Prohibición de nepotismo. Financiamiento transparente de campañas."
+            },
+            "redes": {
+                "twitter": "@aparedes_mc",
+                "facebook": "AnaParedes MC",
+                "web": "https://ejemplo.com/paredes"
+            },
+            "declaracion_jurada": "Ver documento",
+            "investigaciones": "Sin investigaciones en curso",
+            "indice_transparencia": 9.2
+        },
+        {
+            "id": "004",
+            "nombre": "Roberto Campos Vega",
+            "partido": "Frente Renovador",
+            "siglas": "FR",
+            "foto": "assets/images/candidatos/candidato4.jpg",
+            "edad": 55,
+            "profesion": "Médico Cirujano",
+            "experiencia": "Ministro de Salud (2017-2019), Director de Hospital Nacional (2012-2016)",
+            "propuestas": {
+                "economia": "Economía verde y sostenible. Inversión en energías renovables. Desarrollo de industrias tecnológicas.",
+                "salud": "Reforma del sistema de salud. Hospitales de cuarto nivel en regiones. Investigación médica nacional.",
+                "educacion": "Educación técnica de excelencia. Universidades públicas fortalecidas. Investigación científica prioritaria.",
+                "seguridad": "Estrategia integral de seguridad. Inteligencia policial. Prevención del delito juvenil.",
+                "corrupcion": "Tolerancia cero con corrupción. Confiscación de bienes mal habidos. Protección a denunciantes."
+            },
+            "redes": {
+                "twitter": "@rcampos_fr",
+                "facebook": "RobertoCamposFR",
+                "web": "https://ejemplo.com/campos"
+            },
+            "declaracion_jurada": "Ver documento",
+            "investigaciones": "Sin investigaciones en curso",
+            "indice_transparencia": 8.0
+        }
+    ],
+    "categorias": [
+        {
+            "id": "economia",
+            "nombre": "Economía y Empleo",
+            "emoji": "💼"
+        },
+        {
+            "id": "salud",
+            "nombre": "Salud",
+            "emoji": "🏥"
+        },
+        {
+            "id": "educacion",
+            "nombre": "Educación",
+            "emoji": "📚"
+        },
+        {
+            "id": "seguridad",
+            "nombre": "Seguridad Ciudadana",
+            "emoji": "🛡️"
+        },
+        {
+            "id": "corrupcion",
+            "nombre": "Lucha Anticorrupción",
+            "emoji": "⚖️"
+        }
+    ]
+}
