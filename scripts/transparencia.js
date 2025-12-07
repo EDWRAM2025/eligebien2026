@@ -10,54 +10,54 @@ let candidatoSeleccionado = null;
  * Inicializa el módulo de transparencia
  */
 async function initTransparencia() {
-    try {
-        // Cargar datos de transparencia
-        const response = await fetch('./data/transparencia.json');
-        datosTransparencia = await response.json();
+  try {
+    // Cargar datos de transparencia
+    const response = await fetch('./data/transparencia.json');
+    datosTransparencia = await response.json();
 
-        // Renderizar lista de candidatos
-        renderizarListaCandidatos();
+    // Renderizar lista de candidatos
+    renderizarListaCandidatos();
 
-        // Configurar event listeners
-        configurarEventListeners();
+    // Configurar event listeners del modal
+    configurarEventListenersTransparencia();
 
-        console.log('Módulo de Transparencia inicializado correctamente');
-    } catch (error) {
-        console.error('Error al inicializar módulo de transparencia:', error);
-        mostrarError('Error al cargar datos de transparencia');
-    }
+    console.log('Módulo de Transparencia inicializado correctamente');
+  } catch (error) {
+    console.error('Error al inicializar módulo de transparencia:', error);
+    mostrarError('Error al cargar datos de transparencia');
+  }
 }
 
 /**
  * Renderiza la lista de candidatos
  */
 function renderizarListaCandidatos() {
-    const container = document.getElementById('candidatos-list');
-    if (!container) return;
+  const container = document.getElementById('candidatos-list');
+  if (!container) return;
 
-    container.innerHTML = '';
+  container.innerHTML = '';
 
-    datosTransparencia.forEach(candidato => {
-        const candidatoCard = crearCandidatoCard(candidato);
-        container.appendChild(candidatoCard);
-    });
+  datosTransparencia.forEach(candidato => {
+    const candidatoCard = crearCandidatoCard(candidato);
+    container.appendChild(candidatoCard);
+  });
 }
 
 /**
  * Crea una tarjeta de candidato
  */
 function crearCandidatoCard(candidato) {
-    const card = document.createElement('div');
-    card.className = 'candidato-card';
-    card.dataset.id = candidato.candidato_id;
+  const card = document.createElement('div');
+  card.className = 'candidato-card';
+  card.dataset.id = candidato.candidato_id;
 
-    const estadoDeclaracion = candidato.indices.declaracion_completa
-        ? '<span class="badge badge-success">✓ Declaración Completa</span>'
-        : '<span class="badge badge-warning">⚠ Declaración Incompleta</span>';
+  const estadoDeclaracion = candidato.indices.declaracion_completa
+    ? '<span class="badge badge-success">✓ Declaración Completa</span>'
+    : '<span class="badge badge-warning">⚠ Declaración Incompleta</span>';
 
-    const colorScore = getColorScore(candidato.indices.transparencia);
+  const colorScore = getColorScore(candidato.indices.transparencia);
 
-    card.innerHTML = `
+  card.innerHTML = `
     <div class="candidato-header">
       <div class="candidato-info">
         <h3>${candidato.nombre}</h3>
@@ -77,38 +77,38 @@ function crearCandidatoCard(candidato) {
     </button>
   `;
 
-    return card;
+  return card;
 }
 
 /**
  * Muestra los detalles completos de un candidato
  */
 function verDetalles(candidatoId) {
-    const candidato = datosTransparencia.find(c => c.candidato_id === candidatoId);
-    if (!candidato) return;
+  const candidato = datosTransparencia.find(c => c.candidato_id === candidatoId);
+  if (!candidato) return;
 
-    candidatoSeleccionado = candidato;
+  candidatoSeleccionado = candidato;
 
-    // Actualizar información del modal
-    const modal = document.getElementById('detalle-modal');
-    const modalContent = document.getElementById('modal-content');
+  // Actualizar información del modal
+  const modal = document.getElementById('detalle-modal');
+  const modalContent = document.getElementById('modal-content');
 
-    modalContent.innerHTML = generarDetalleCompleto(candidato);
+  modalContent.innerHTML = generarDetalleCompleto(candidato);
 
-    // Mostrar modal
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  // Mostrar modal
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 /**
  * Genera el HTML del detalle completo
  */
 function generarDetalleCompleto(candidato) {
-    const dj = candidato.declaracion_jurada;
-    const totalActivos = calcularTotalActivos(candidato);
-    const patrimonioNeto = totalActivos - dj.deudas;
+  const dj = candidato.declaracion_jurada;
+  const totalActivos = calcularTotalActivos(candidato);
+  const patrimonioNeto = totalActivos - dj.deudas;
 
-    return `
+  return `
     <div class="detalle-header">
       <h2>${candidato.nombre}</h2>
       <p class="partido">${candidato.partido}</p>
@@ -182,11 +182,11 @@ function generarDetalleCompleto(candidato) {
  * Genera lista de bienes inmuebles
  */
 function generarListaBienes(bienes) {
-    if (!bienes || bienes.length === 0) {
-        return '<p class="empty-state">No hay bienes inmuebles declarados</p>';
-    }
+  if (!bienes || bienes.length === 0) {
+    return '<p class="empty-state">No hay bienes inmuebles declarados</p>';
+  }
 
-    return `
+  return `
     <div class="bienes-list">
       ${bienes.map(bien => `
         <div class="bien-item">
@@ -206,11 +206,11 @@ function generarListaBienes(bienes) {
  * Genera lista de vehículos
  */
 function generarListaVehiculos(vehiculos) {
-    if (!vehiculos || vehiculos.length === 0) {
-        return '<p class="empty-state">No hay vehículos declarados</p>';
-    }
+  if (!vehiculos || vehiculos.length === 0) {
+    return '<p class="empty-state">No hay vehículos declarados</p>';
+  }
 
-    return `
+  return `
     <div class="vehiculos-list">
       ${vehiculos.map(vehiculo => `
         <div class="vehiculo-item">
@@ -226,27 +226,27 @@ function generarListaVehiculos(vehiculos) {
  * Genera historial legal
  */
 function generarHistorialLegal(historial) {
-    const items = [
-        { label: 'Sanciones Administrativas', value: historial.sanciones_administrativas },
-        { label: 'Procesos Judiciales', value: historial.procesos_judiciales },
-        { label: 'Inhabilitaciones', value: historial.inhabilitaciones }
-    ];
+  const items = [
+    { label: 'Sanciones Administrativas', value: historial.sanciones_administrativas },
+    { label: 'Procesos Judiciales', value: historial.procesos_judiciales },
+    { label: 'Inhabilitaciones', value: historial.inhabilitaciones }
+  ];
 
-    return `
+  return `
     <div class="legal-grid">
       ${items.map(item => {
-        const hasIssues = item.value > 0;
-        const icon = hasIssues ? '⚠️' : '✅';
-        const cssClass = hasIssues ? 'has-issues' : 'clean';
+    const hasIssues = item.value > 0;
+    const icon = hasIssues ? '⚠️' : '✅';
+    const cssClass = hasIssues ? 'has-issues' : 'clean';
 
-        return `
+    return `
           <div class="legal-item ${cssClass}">
             <span class="icon">${icon}</span>
             <span class="label">${item.label}:</span>
             <span class="value">${item.value}</span>
           </div>
         `;
-    }).join('')}
+  }).join('')}
     </div>
   `;
 }
@@ -255,91 +255,91 @@ function generarHistorialLegal(historial) {
  * Calcula el total de activos
  */
 function calcularTotalActivos(candidato) {
-    const dj = candidato.declaracion_jurada;
+  const dj = candidato.declaracion_jurada;
 
-    const totalInmuebles = dj.bienes_inmuebles.reduce((sum, bien) => sum + bien.valor_estimado, 0);
-    const totalVehiculos = dj.vehiculos.reduce((sum, vehiculo) => sum + vehiculo.valor_estimado, 0);
+  const totalInmuebles = dj.bienes_inmuebles.reduce((sum, bien) => sum + bien.valor_estimado, 0);
+  const totalVehiculos = dj.vehiculos.reduce((sum, vehiculo) => sum + vehiculo.valor_estimado, 0);
 
-    return totalInmuebles + totalVehiculos + dj.cuentas_bancarias + dj.inversiones;
+  return totalInmuebles + totalVehiculos + dj.cuentas_bancarias + dj.inversiones;
 }
 
 /**
  * Configura event listeners
  */
-function configurarEventListeners() {
-    // Cerrar modal
-    const closeBtn = document.querySelector('.modal-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', cerrarModal);
-    }
+function configurarEventListenersTransparencia() {
+  // Cerrar modal
+  const closeBtn = document.querySelector('.modal-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', cerrarModal);
+  }
 
-    // Cerrar modal al hacer click fuera
-    const modal = document.getElementById('detalle-modal');
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                cerrarModal();
-            }
-        });
-    }
-
-    // Cerrar con tecla Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            cerrarModal();
-        }
+  // Cerrar modal al hacer click fuera
+  const modal = document.getElementById('detalle-modal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        cerrarModal();
+      }
     });
+  }
+
+  // Cerrar con tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      cerrarModal();
+    }
+  });
 }
 
 /**
  * Cierra el modal
  */
 function cerrarModal() {
-    const modal = document.getElementById('detalle-modal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
+  const modal = document.getElementById('detalle-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
 /**
  * Obtiene color según score de transparencia
  */
 function getColorScore(score) {
-    if (score >= 80) return 'linear-gradient(135deg, #10b981, #059669)';
-    if (score >= 60) return 'linear-gradient(135deg, #f59e0b, #d97706)';
-    return 'linear-gradient(135deg, #ef4444, #dc2626)';
+  if (score >= 80) return 'linear-gradient(135deg, #10b981, #059669)';
+  if (score >= 60) return 'linear-gradient(135deg, #f59e0b, #d97706)';
+  return 'linear-gradient(135deg, #ef4444, #dc2626)';
 }
 
 /**
  * Formatea fecha
  */
 function formatDate(dateString) {
-    const date = new Date(dateString);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('es-PE', options);
+  const date = new Date(dateString);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('es-PE', options);
 }
 
 /**
  * Formatea números con separador de miles
  */
 function formatNumber(num) {
-    return num.toLocaleString('es-PE');
+  return num.toLocaleString('es-PE');
 }
 
 /**
  * Muestra mensaje de error
  */
 function mostrarError(mensaje) {
-    const container = document.getElementById('candidatos-list');
-    if (container) {
-        container.innerHTML = `
+  const container = document.getElementById('candidatos-list');
+  if (container) {
+    container.innerHTML = `
       <div class="error-message">
         <p>⚠️ ${mensaje}</p>
         <button onclick="initTransparencia()" class="btn btn-primary">Reintentar</button>
       </div>
     `;
-    }
+  }
 }
 
 // Inicializar cuando el DOM esté listo
