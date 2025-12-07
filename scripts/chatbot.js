@@ -89,6 +89,12 @@ function configurarEventListeners() {
     const sendBtn = document.getElementById('send-button');
     const input = document.getElementById('chatbot-input');
 
+    // Verificar que todos los elementos existan antes de agregar listeners
+    if (!toggle || !closeBtn || !sendBtn || !input) {
+        console.warn('Algunos elementos del chatbot no se encontraron');
+        return;
+    }
+
     toggle.addEventListener('click', toggleChat);
     closeBtn.addEventListener('click', toggleChat);
     sendBtn.addEventListener('click', enviarMensaje);
