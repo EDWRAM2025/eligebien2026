@@ -115,6 +115,18 @@ a:hover {
 }
 
 /* === Logo === */
+.logo {
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  transition: transform var(--transition-normal);
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 .logo-header {
   width: 180px;
   height: auto;
@@ -289,6 +301,17 @@ section h2 {
   text-align: center;
   margin-bottom: var(--spacing-lg);
   color: var(--primary-color);
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+.section-light {
+  background-color: var(--bg-light);
+  position: relative;
+  z-index: 1;
 }
 
 /* === Cards === */

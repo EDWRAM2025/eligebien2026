@@ -1,7 +1,10 @@
 /**
- * Módulo de Transparencia - Elige Bien 2026
+ * Módulo de Transparencia -ige Bien 2026
  * Visualización de declaraciones juradas y datos patrimoniales
+ * Versión: 3.0 - Debug mejorado
  */
+
+console.log('[TRANSPARENCIA] Script cargado');
 
 let datosTransparencia = [];
 let candidatoSeleccionado = null;
@@ -10,10 +13,27 @@ let candidatoSeleccionado = null;
  * Inicializa el módulo de transparencia
  */
 async function initTransparencia() {
+  console.log('[TRANSPARENCIA] Iniciando módulo de transparencia...');
   try {
-    // Cargar datos de transparencia
-    const response = await fetch('./data/transparencia.json');
+    // Verificar que el contenedor existe
+    const container = document.getElementById('candidatos-list');
+    if (!container) {
+      console.error('[TRANSPARENCIA] FATAL: Contenedor candidatos-list no encontrado');
+      return;
+    }
+    console.log('[TRANSPARENCIA] Contenedor encontrado:', container);
+
+    // Cargar datos de transparencia con cache busting
+    const timestamp = new Date().getTime();
+    console.log('[TRANSPARENCIA] Cargando datos con timestamp:', timestamp);
+    const response = await fetch(`./data/transparencia.json?v=${timestamp}`);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     datosTransparencia = await response.json();
+    console.log('[TRANSPARENCIA] Datos cargados:', datosTransparencia.length, 'candidatos', datosTransparencia);
 
     // Renderizar lista de candidatos
     renderizarListaCandidatos();
@@ -21,10 +41,10 @@ async function initTransparencia() {
     // Configurar event listeners del modal
     configurarEventListenersTransparencia();
 
-    console.log('Módulo de Transparencia inicializado correctamente');
+    console.log('[TRANSPARENCIA] Módulo inicializado correctamente');
   } catch (error) {
-    console.error('Error al inicializar módulo de transparencia:', error);
-    mostrarError('Error al cargar datos de transparencia');
+    console.error('[TRANSPARENCIA] Error al inicializar:', error);
+    mostrarError('Error al cargar datos de transparencia. Por favor, refresca la página.');
   }
 }
 
@@ -32,15 +52,31 @@ async function initTransparencia() {
  * Renderiza la lista de candidatos
  */
 function renderizarListaCandidatos() {
+  console.log('[TRANSPARENCIA] Renderizando lista de candidatos...');
   const container = document.getElementById('candidatos-list');
-  if (!container) return;
+  if (!container) {
+    console.error('[TRANSPARENCIA] Contenedor candidatos-list no encontrado');
+    return;
+  }
 
+  // Limpiar contenedor
   container.innerHTML = '';
+  console.log('[TRANSPARENCIA] Contenedor limpiado');
 
-  datosTransparencia.forEach(candidato => {
+  if (!datosTransparencia || datosTransparencia.length === 0) {
+    container.innerHTML = '<p class="empty-state">No hay candidatos disponibles</p>';
+    return;
+  }
+
+  datosTransparencia.forEach((candidato, index) => {
+    console.log(`[TRANSPARENCIA] Creando tarjeta para candidato ${index + 1}:`, candidato.nombre);
     const candidatoCard = crearCandidatoCard(candidato);
     container.appendChild(candidatoCard);
   });
+
+  console.log('[TRANSPARENCIA] Lista renderizada. Total elementos:', container.children.length);
+  console.log('[TRANSPARENCIA] Altura del contenedor:', container.offsetHeight);
+  console.log('[TRANSPARENCIA] Display del contenedor:', window.getComputedStyle(container).display);
 }
 
 /**
@@ -77,6 +113,7 @@ function crearCandidatoCard(candidato) {
     </button>
   `;
 
+  console.log('[TRANSPARENCIA] Tarjeta creada para:', candidato.nombre);
   return card;
 }
 
@@ -84,14 +121,23 @@ function crearCandidatoCard(candidato) {
  * Muestra los detalles completos de un candidato
  */
 function verDetalles(candidatoId) {
+  console.log('[TRANSPARENCIA] Ver detalles de candidato:', candidatoId);
   const candidato = datosTransparencia.find(c => c.candidato_id === candidatoId);
-  if (!candidato) return;
+  if (!candidato) {
+    console.error('[TRANSPARENCIA] Candidato no encontrado:', candidatoId);
+    return;
+  }
 
   candidatoSeleccionado = candidato;
 
   // Actualizar información del modal
   const modal = document.getElementById('detalle-modal');
   const modalContent = document.getElementById('modal-content');
+
+  if (!modal || !modalContent) {
+    console.error('[TRANSPARENCIA] Elementos del modal no encontrados');
+    return;
+  }
 
   modalContent.innerHTML = generarDetalleCompleto(candidato);
 
@@ -153,7 +199,7 @@ function generarDetalleCompleto(candidato) {
       <h3>💰 Activos Financieros</h3>
       <div class="financial-grid">
         <div class="financial-item">
-          <span class="label">Cuentas Bancarias:</span>
+          <span class="label">Cuentas encarias:</span>
           <span class="value">S/ ${formatNumber(dj.cuentas_bancarias)}</span>
         </div>
         <div class="financial-item">
@@ -267,10 +313,13 @@ function calcularTotalActivos(candidato) {
  * Configura event listeners
  */
 function configurarEventListenersTransparencia() {
+  console.log('[TRANSPARENCIA] Configurando event listeners...');
+
   // Cerrar modal
   const closeBtn = document.querySelector('.modal-close');
   if (closeBtn) {
     closeBtn.addEventListener('click', cerrarModal);
+    console.log('[TRANSPARENCIA] Event listener para cerrar modal agregado');
   }
 
   // Cerrar modal al hacer click fuera
@@ -343,4 +392,9 @@ function mostrarError(mensaje) {
 }
 
 // Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', initTransparencia);
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('[TRANSPARENCIA] DOMContentLoaded event disparado');
+  initTransparencia();
+});
+
+console.log('[TRANSPARENCIA] Script completamente cargado');
