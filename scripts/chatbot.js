@@ -36,7 +36,7 @@ function crearWidget() {
     widget.id = 'chatbot-widget';
     widget.innerHTML = `
     <!-- Botón flotante -->
-    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Abrir asistente">
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Abrir asistente EDW ONPE">
       <span class="chat-icon">💬</span>
       <span class="chat-text">¿Preguntas?</span>
     </button>
@@ -45,10 +45,10 @@ function crearWidget() {
     <div class="chatbot-window" id="chatbot-window">
       <div class="chatbot-header">
         <div class="header-content">
-          <span class="bot-avatar">🤖</span>
+          <img src="./EDWWWW.jpg" alt="EDW ONPE" class="bot-avatar">
           <div class="bot-info">
-            <h3>Asistente Cívico</h3>
-            <p class="bot-status">En línea</p>
+            <h3>EDW ONPE</h3>
+            <p class="bot-status">En línea • Listo para ayudarte</p>
           </div>
         </div>
         <button class="close-chat" id="close-chat" aria-label="Cerrar chat">&times;</button>
@@ -133,7 +133,7 @@ function toggleChat() {
 function mostrarMensajeBienvenida() {
     const mensaje = {
         tipo: 'bot',
-        texto: '¡Hola! 👋 Soy tu asistente cívico para las Elecciones 2026. Puedo ayudarte con información sobre el proceso electoral, candidatos, votación y más.\\n\\n¿En qué puedo ayudarte?',
+        texto: '¡Hola! 👋 Soy **EDW ONPE**, tu asistente personal para las Elecciones 2026. 🗳️\\n\\nEstoy aquí para ayudarte con:\\n• Información sobre el proceso electoral\\n• Datos de candidatos y propuestas\\n• Consultas sobre votación\\n• Y mucho más\\n\\n¿En qué puedo ayudarte hoy?',
         timestamp: new Date()
     };
 
@@ -221,9 +221,49 @@ function buscarRespuesta(pregunta) {
     } else {
         return {
             tipo: 'bot',
-            texto: 'Lo siento, no tengo una respuesta específica para esa pregunta. 😕\\n\\n¿Podrías reformularla o elegir una de las preguntas sugeridas?\\n\\nTambién puedes consultar directamente en:\\n• ONPE: www.onpe.gob.pe\\n• JNE: portal.jne.gob.pe',
+            texto: 'Entiendo tu consulta, pero no encuentro una respuesta específica en mi base de datos actual. 🤔\\n\\nPermíteme ayudarte de otra manera:\\n\\n**Puedes:**\\n• Reformular tu pregunta con otras palabras\\n• Elegir una de las preguntas sugeridas abajo\\n• Consultar directamente:\\n  → ONPE: www.onpe.gob.pe\\n  → JNE: portal.jne.gob.pe\\n\\nEstoy aquí para ayudarte en lo que necesites. 😊',
             timestamp: new Date()
         };
+    }
+}
+
+/**
+ * Busca información en Google Drive
+ */
+async function buscarEnDrive(pregunta) {
+    try {
+        // Asegurarse de que Drive esté inicializado
+        if (typeof googleDriveService === 'undefined') {
+            return null;
+        }
+
+        if (!googleDriveService.isInitialized) {
+            await googleDriveService.init();
+        }
+
+        // Si no está autenticado, no buscar (silencioso)
+        if (!googleDriveService.isSignedIn) {
+            return null;
+        }
+
+        // Buscar en archivos
+        const resultados = await googleDriveService.searchInFiles(pregunta);
+
+        if (resultados && resultados.length > 0) {
+            // Tomar el primer resultado más relevante
+            const mejorResultado = resultados[0];
+
+            return {
+                tipo: 'bot',
+                texto: `✅ Encontré información relevante:\\n\\n${mejorResultado.context}\\n\\n📄 *Fuente: ${mejorResultado.fileName}*`,
+                timestamp: new Date()
+            };
+        }
+
+        return null;
+    } catch (error) {
+        console.error('❌ Error buscando en Drive:', error);
+        return null;
     }
 }
 
@@ -236,7 +276,9 @@ function agregarMensajeAlChat(mensaje) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `chat-message ${mensaje.tipo}-message`;
 
-    const avatar = mensaje.tipo === 'bot' ? '🤖' : '👤';
+    const avatar = mensaje.tipo === 'bot'
+        ? '<img src="./EDWWWW.jpg" alt="EDW ONPE" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">'
+        : '👤';
     const tiempo = formatearTiempo(mensaje.timestamp);
 
     messageDiv.innerHTML = `

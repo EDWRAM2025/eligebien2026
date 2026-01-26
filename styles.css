@@ -1327,6 +1327,12 @@ footer {
 
 .bot-avatar {
   font-size: 2rem;
+  /* Support for image avatars */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
 }
 
 .bot-info h3 {
